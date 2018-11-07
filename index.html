@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="sheet.css" />
+    <title>TEDxYouth@JNS</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="logo" src="TEDxYouth@JNS LogoBOLD.svg" />
+        </div>
+        <div class="navbar">
+            <ul class="navbar">
+                <li><a class="us" href="#contact">contact</a></li>
+                <li><a href="#speakers">speakers</a></li>
+                <li><a href="#archives">archives</a></li>
+                <li><a href="#about">about</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="theatre">
+        <div class="slideshow">
+            <div class="slide fade">
+
+                <img src="1.jpg" style="width:100%">
+            </div>
+
+            <div class="slide fade">
+
+                <img src="2.jpg" style="width:100%">
+            </div>
+
+            <div class="slide fade">
+
+                <img src="3.jpg" style="width:100%">
+            </div>
+            <br />
+            <div style="text-align:center">
+                <span class="watch"></span>
+                <span class="watch"></span>
+                <span class="watch"></span>
+            </div>
+        </div>
+    </div>
+    <div class="motob">
+        <div  id="motoT" class="moto" onmouseout="motoRO()" onmouseover="motoR()">I am the change</div>
+    </div>
+    <div class="invite">
+        <a href="http://google.com">
+            <div class="getInvite">
+                Get invited
+            </div>
+        </a>
+    </div>
+    <div class="contain">
+        <centre><x>TEDx</x>Youth@JNS</centre><br />
+        <div class="intro">
+
+            <d id="high1">
+                We are thrilled to announce the first edition of TEDxYouth@JNS! Created in the spirit of
+                TED’s mission- “ideas worth spreading”, TEDxYouth@JNS aims to provide eye-opening, intellect-stimulating
+                and conversation-sparking experiences that will broaden your mind and inspire you to ‘Be The Change’. It symbolises the
+                dissemination of unconventional, path breaking ideas; stirring intellection and imaginative thinking. TEDxYouth@JNS is going to be
+                held on the
+            </d><mark id="change" onmouseup="decOut()" onmouseover="decIn()">15th of December, 2018 at Jamnabai Narsee School</mark><d id="high2">
+    . We aim to have a plethora of speakers from different walks of life
+    in order to make the event a one of its kind enriching experience.
+        </d>
+        </div>
+    </div>
+    <div class="foot">
+        <a class="bl" href="#"><i title="Tumblr" class="fab fa-tumblr"></i></a>
+        <a class="bl" href="#"><i title="Facebook"class="fab fa-facebook-f"></i></a>
+        <a class="bl" href="#"><i title="Instagram"class="fab fa-instagram"></i></a>
+    </div>
+    <div class="mes">
+        <x>TEDx</x>Youth@JNS 2018| This independent TEDx event is operated under a license from TED.
+        <br />Website developed by <a class="me" href="http://www.twitter.com">lafeo_007</a>
+    </div>
+
+
+    <script>
+        function decOut() {
+            document.getElementById("change").innerHTML = "15th of December, 2018 at Jamnabai Narsee School";
+            document.getElementById("high1").style.opacity = "1";
+            document.getElementById("high2").style.opacity = "1";
+        }
+        function decIn() {
+            document.getElementById("change").innerHTML = "Watch us live on <a href=\"http://www.google.com\">livestream.com</a> and be a part of this spectacular event";
+            document.getElementById("high1").style.opacity = "0.1";
+            document.getElementById("high2").style.opacity = "0.1";
+
+        }
+        function motoR() {
+            document.getElementById("motoT").innerHTML = "# tedxyouthjns";
+        }
+        function motoRO() {
+            document.getElementById("motoT").innerHTML = "I am the change";
+        }
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var watchs = document.getElementsByClassName("watch");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < watchs.length; i++) {
+                watchs[i].className = watchs[i].className.replace(" this", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            watchs[slideIndex - 1].className += " this";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
