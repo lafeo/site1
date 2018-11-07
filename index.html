@@ -47,8 +47,8 @@
             </div>
         </div>
     </div>
-    <div class="motob">
-        <div  id="motoT" class="moto" onmouseout="motoRO()" onmouseover="motoR()">I am the change</div>
+    <div id="motoT" onmouseout="motoRO()" onmouseover="motoR()" class="motob">
+        <div  class="moto" >I am the change</div>
     </div>
     <div class="invite">
         <a href="http://google.com">
@@ -97,10 +97,12 @@
 
         }
         function motoR() {
-            document.getElementById("motoT").innerHTML = "# tedxyouthjns";
+            document.getElementById("motoT").innerHTML = "<m class=\"s\"> We, as humans must be the change we wish to see in the world. Instead of accepting the things we "
+                + "cannot change, we should put our best foot forward and change the things we cannot accept. The world is a huge place and each of us has a role to play. "
+                + "Play your role, be the change.Change the world you live in and make it the best version of itself.</motos > ";
         }
         function motoRO() {
-            document.getElementById("motoT").innerHTML = "I am the change";
+            document.getElementById("motoT").innerHTML = "<div  class=\"moto\" >I am the change</div>";
         }
         var slideIndex = 0;
         showSlides();
