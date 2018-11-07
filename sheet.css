@@ -26,6 +26,7 @@ body {
     height: 100px;
     
     float: left;
+    width: 40%;
     position: relative;
     left: 10px;
     top: 3px;
@@ -34,14 +35,19 @@ body {
 .navbar{
     color: #fff;
     position: relative;
-    float: right;
+    float: left;
+    left: 13%;
+    width: 60%;
     top: 10px;
 }
-.theatre{
-    margin-top: 120px;
+.theatre {
+    position: relative;
+    top: 120px;
     background-color: #000;
     width: 100%;
     max-height: 1000px;
+    z-index: 1;
+    box-shadow: 0px 2px 10px black;
 }
 .slideshow {
     max-width: 1200px;
@@ -66,24 +72,33 @@ body {
     background-image: url(bkc.svg);
     color: #fff;
     font-family: Montserrat;
-    font-weight: 800;
     
-    font-size: 80pt;
+    
+    
     position: relative;
 
+    top: 120px;
     background-color: black;
     height: 170px;
     float: left;
     width: 100%;
 
 }
-.moto{
-    position: relative;
+.moto {
+    font-size: 80pt;
+    font-weight: 800;
+    position: absolute;
     text-align: center;
     top: 25px;
-	font-size: 6vw;
-    
+    left: 25%;
     transition: opacity .4s;
+}
+.s{
+    font-weight: 900;
+    position: absolute;
+    text-align: justify;
+    padding: 10px;
+    font-size: 20pt;
 }
 .as{
     text-decoration: none;
@@ -96,12 +111,12 @@ img{
     vertical-align: middle;
 }
 .invite {
+    
     position: relative;
+    top: 120px;
     width: 100%;
-	padding-top:64px;
-	padding-bottom:64px;
+    height: 200px;
     float: left;
-	text-align: center;
     box-shadow: 0px 2px 0px #BDBDBD;
 }
 a.me {
@@ -117,11 +132,12 @@ a.me:hover{
 
 .getInvite {
     width: 200px;
-    display: inline-block;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #000;
     position: relative;
+    left: 45%;
+    top: 70px;
     background-color: #000;
     color: white;
     opacity: 0.1;
@@ -130,14 +146,15 @@ a.me:hover{
     font-family: Montserrat;
     font-size: 25pt;
     transition: 0.7s;
-
+    float: left;
     font-weight: 800;
 }
 .foot {
-    text-align: center;
+    left: 45%;
     height: 30px;
+    float: left;
     position: relative;
-    padding-top: 48px;
+    top: 300px;
 
     
 }
@@ -159,16 +176,17 @@ i:hover{
     font-family: Helvetica;
     position: relative;
     width: 100%;
+    top: 400px;
     text-align: center;
-	padding-bottom: 32px;
-	top: 72px;
+    height: 90px;
+
 
 }
 .contain {
     width: 100%;
     position: relative;
     float: left;
-	padding-top: 48px;
+    top: 210px;
     text-align: center;
     font-family: Helvetica;
     font-size: 35pt;
@@ -179,19 +197,16 @@ x {
     color: red;
     text-align: center;
 }
-
-
-
 .intro {
     position: relative;
-    margin-top: 30px;
+    top: 30px;
     text-align: justify;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 200px;
+    padding-right: 200px;
     font-weight: 700;
-	padding-bottom: 48px;
     font-size: 18pt;
     font-family: Montserrat;
+    height: 340px;
     box-shadow: 0px 2px 0px #BDBDBD;
 }
 ul.navbar li{
@@ -214,6 +229,7 @@ ul.navbar a {
     ul.navbar a:hover {
         color: #FF5252;
     }
+    
 .us:hover {
     border-color: red;
     border: 2px solid red;
@@ -234,8 +250,6 @@ a{
 }
 a.bl{
     color: black;
-	display: inline-block;
-	position: relative;
 }
 
 .this{
@@ -266,9 +280,4 @@ a.bl{
     to {
         opacity: 1
     }
-}
-@media(max-width: 800px){
-	.navbar ul{
-		display: none;
-	}	
 }
