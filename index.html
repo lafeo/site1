@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <div class="header">
+    <div id="header" class="header">
+
+        <img class="dexs" />
         <div id="nav" class="navbar">
             <img height="64" style="margin-top: 16px; margin-left: 64px; float: left" src="lg.svg" />
             <a id="" class="navitem gi">Get invited</a>
@@ -22,12 +24,12 @@
         <div class="hcontent">
             <span style="font-size: 32px; font-weight: 300;">&ldquo;I AM THE CHANGE&rdquo;</span>
             <span style="font-size: 48px; font-weight: 900; font-family: Arial; color: red;">TEDx<span style="color: #FFF; font-weight: 400; font-family: Helvetica;">Youth@JNS</span></span>
-            
+
             <br />
             <span style="font-size: 18px;">We are thrilled to announce the first edition of TEDxYouth@JNS! Created in the spirit of TED’s mission- “ideas worth spreading”, TEDxYouth@JNS aims to provide eye-opening, intellect-stimulating and conversation-sparking experiences that will broaden your mind and inspire you to ‘Be The Change’. It symbolises the dissemination of unconventional, path breaking ideas; stirring intellection and imaginative thinking. TEDxYouth@JNS is going to be held on the 15th of December,2018 at Jamnabai Narsee School. We aim to have a plethora of speakers from different walks of life in order to make the event a one of its kind enriching experience.</span>
         </div>
     </div>
-    <div style="height: 8000px; width: 100%;"></div>
+    <div style="height: 8000px; width: 100%; color: black">ABOUT</div>
 
 </body>
 <script>
@@ -41,6 +43,28 @@
                 $nav.toggleClass('scroll', false);
             }
         });
+    });
+    $(document).ready(function () {
+        var c = 0;
+        var slides = ["url(bg.jpg)", "url(bg2.jpg)"];
+        
+        $(".dexs").fadeIn(1000);
+        setInterval(function () {
+            $(".dexs").css("background-size", "cover");
+            $(".dexs").css("background-image", slides[c]);
+            if (c == 1) 
+                c = 0;
+            
+            else
+                c = 1;
+        
+                console.log(c);
+                
+
+        }, 4000);
+        $(".dexs").fadeIn(1000);
+        
+        
     });
 </script>
 </html>
