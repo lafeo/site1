@@ -4,7 +4,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), transparent;
-    
+    position: absolute;
 }
 .dexs{
     position: absolute;
@@ -46,6 +46,7 @@ body, html {
 .hcontent {
     min-height: calc(100% - 96px);
     width: 100%;
+	margin-top: 96px;
     color: #FFF;
     box-sizing: border-box;
     display: flex;

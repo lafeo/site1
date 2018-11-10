@@ -49,23 +49,19 @@
     });
     $(document).ready(function () {
         var c = 0;
-        var slides = ["url(bg.jpg)", "url(bg2.jpg)"];
+        var slides = ["bg.jpg", "bg2.jpg"];
+		
+        var u1 = function(){
+			c++;
+			if(c>=slides.length) c = 0;
+			$(".dexs").fadeOut(1000,function(){
+					$(".dexs").css("background-image", "url("+slides[c]+")");
+					$(".dexs").fadeIn(1000);
+				});
+		}
         
-        $(".dexs").fadeIn(1000);
-        setInterval(function () {
-            $(".dexs").css("background-size", "cover");
-            $(".dexs").css("background-image", slides[c]);
-            if (c == 1) 
-                c = 0;
-            
-            else
-                c = 1;
+        setInterval(u1, 4000);
         
-                console.log(c);
-                
-
-        }, 4000);
-        $(".dexs").fadeIn(1000);
         
         
     });
