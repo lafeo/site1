@@ -77,3 +77,20 @@ body, html {
     background-color: #E91E63;
     border-radius: 48px;
 }
+@media(max-width: 880px){
+	.navitem{
+		display: none;
+	}
+	.header{
+		height: fit-content;
+		min-height: 100%;
+	}
+	.hcontent{
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		justify-content: start;
+		padding-right: inherit;
+		padding: 48px;
+	}
+}
