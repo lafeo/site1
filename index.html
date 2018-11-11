@@ -17,7 +17,7 @@
     <div id="header" class="header">
 
         <img class="dexs" />
-        <div id="nav" onmouseover="onMe()" class="navbar">
+        <div id="nav" class="navbar">
             <img height="64" style="margin-top: 16px; margin-left: 64px; float: left" src="lg.svg" />
             <a id="" href="#iM" class="navitem gi">Get invited</a>
             <a id="" class="navitem ">Archive</a>
@@ -58,7 +58,6 @@
 <script>
     $(function () {
         $(document).scroll(function () {
-            console.log("DS");
             var $nav = $("#nav");
             if ($(this).scrollTop() > $nav.height()) {
                 $nav.toggleClass('scroll', true);
@@ -71,25 +70,34 @@
     });
     $(document).ready(function () {
         var c = 0;
-        var slides = ["url(bg.jpg)", "url(bg3.jpg)"];
-        
-        $(".dexs").fadeIn(1000);
-        setInterval(function () {
-            $(".dexs").css("background-size", "cover");
-            $(".dexs").css("background-image", slides[c]);
-            if (c == 1) 
-                c = 0;
-            
-            else
-                c = 1;
-        
-                console.log(c);
-                
+        var slides = ["bg.jpg", "bg2.jpg"];
+		
+        var u1 = function(){
+			c++;
+			if(c>=slides.length) c = 0;
+			$(".dexs").fadeOut(1000,function(){
+					$(".dexs").css("background-image", "url("+slides[c]+")");
+					$(".dexs").fadeIn(1000);
+				});
+		}
+        setInterval(u1, 4000);
+        $("a").on('click', function(event) {
 
-        }, 4000);
-        $(".dexs").fadeIn(1000);
-        
+            if (this.hash !== "") {
+
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                    });
+            }
+        });
         
     });
+
 </script>
 </html>

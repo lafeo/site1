@@ -9,13 +9,13 @@
 .footer{
     height: 100px;
     background-color: red;
-    margin-top: 96px;
+    margin-top: 16px;
 }
 .dexs{
     position: absolute;
     z-index: -1;
-    height: inherit;
-    width: inherit;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-image: url(bg.jpg);
 }
@@ -50,7 +50,7 @@ body, html {
     transition: 1s;
 }
 .hcontent {
-    min-height: calc(100%);
+    min-height: 100%;
     width: 100%;
     color: #FFF;
     box-sizing: border-box;
@@ -59,7 +59,8 @@ body, html {
     justify-content: center;
     padding: 0px 64px; 
     text-align: justify;
-    padding-right: 40%
+    padding-right: 40%;
+    padding-top: 96px;
 }
 .navitem{
     height: 96px;
@@ -86,33 +87,28 @@ a{
     height: 200vh;
 }
 .inviteMes{
-    margin-top: 108px;
-    margin-bottom: 96px;
-    height: 550px;
+    padding-top: 108px;
+    padding-bottom: 48px;
+    min-height: 550px;
     max-width: 100%;
     
 }
 .connect{
     width: 50%;
     box-sizing: border-box;
-    
     background-size: cover;
-
     float: left;
     height: 550px; 
-    padding: 48px; 
-    
+    padding: 48px;  
 }
 li{
     display: block;
 }
 .spacer1{
     height: 550px;
-    width: 4px;
+    width: 1px;
     background-color: #E0E0E0;
     float: left;
-    
-
     border-radius: 2px;
 }
 .infoFI{
@@ -147,4 +143,39 @@ li{
 .gi:hover {
     background-color: #E91E63;
     border-radius: 48px;
+}
+@media(max-width: 880px){
+	.navitem{
+		display: none;
+	}
+	.header{
+		height: fit-content;
+		min-height: 100%;
+	}
+	.hcontent{
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		justify-content: start;
+		padding-right: inherit;
+        padding: 48px;
+        padding-top: 144px;
+    }
+    .connect{
+        width: 100%;
+        box-sizing: border-box;
+        float: none;
+        height: inherit;
+        padding: 48px;  
+    }
+    .infoFI{
+        float: none;
+        width: 100%;
+        font-size: 16px;
+        height: auto;
+    }
+    .spacer1{
+        width: 100%;
+        height: 1px;
+    }
 }
