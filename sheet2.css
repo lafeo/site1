@@ -1,0 +1,111 @@
+body,html{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    
+    font-family: 'Montserrat';
+}
+
+.bg{
+    position: fixed;
+    background-image: url(bga.jpg);
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    z-index: -1;
+    
+}
+.header {
+    font-family: Montserrat;
+    font-weight: 500;
+    width: 100%;
+    height: 96px;
+    
+    
+}
+.navbar{
+    background-color: rgba(0,0,0,0.8) !important;
+    height: 96px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-right: 64px;
+    box-sizing: border-box;
+    transition: 1s;
+    border-bottom: thin solid rgba(0,0,0,0.2);
+}
+.navitem{
+    height: 96px;
+    width: auto;
+    box-sizing: border-box;
+    line-height: 96px;
+    color: #fff;
+    
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    float: right;
+    padding: 0px 24px;
+
+}
+.navitem.lg{
+    float: left;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gi {
+    border-radius: 12px;
+    height: 48px !important;
+    margin-top: 24px;
+    margin-left: 16px;
+    line-height: 48px !important;
+    background-color: rgba(255,255,255,0.1)
+}
+.content{
+    
+    margin: 64px;
+    float: left;
+    margin-left: 25%;
+    width: 50%;
+
+    overflow: hidden;
+}
+.content1{
+    box-sizing: border-box;
+    padding: 16px;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    border-radius: 10px;
+    margin-bottom: 24px;
+    
+}
+li{
+    text-decoration: none;
+    display: block;
+}
+#tedLink{
+    color: #FF8989;
+    transition: 0.3s;
+    font-weight: 500;
+}
+#tedLink:hover{
+    color: #BDBDBD;
+    
+}
+.footer{
+    position: relative;
+    top: 100%;
+    height: 100px;
+    background-color: red;
+    margin-top: 96px;
+}
+.navitem:hover{
+    background-color: rgba(255,255,255,0.1)
+}
+.gi:hover {
+    background-color: #E91E63;
+    border-radius: 48px;
+}
